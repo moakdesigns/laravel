@@ -1,18 +1,19 @@
 <?php
+//
+class CustomerController extends BaseController {
 
-class BaseController extends Controller {
-
-	/**
-	 * Setup the layout used by the controller.
-	 *
-	 * @return void
-	 */
-	protected function setupLayout()
-	{
-		if ( ! is_null($this->layout))
-		{
-			$this->layout = View::make($this->layout);
-		}
+	public function getIndex() {
+		$id = Input::get('id');
+		return Customer::find($id);
 	}
 
+	public function getAll() {
+		return Customer::all();
+	}
+
+	public function postIndex() {
+		if (Input::has('first_name', 'last_name', 'email')) {
+			$input = Input::all();
+		}
+	}
 }
