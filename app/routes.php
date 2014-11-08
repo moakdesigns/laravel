@@ -13,3 +13,8 @@
 
 Route::controller('/customers', 'CustomerController');
 Route::controller('/transactions', 'TransactionController');
+//Route::controller('/notes', 'NoteController');
+//Route::controller('/contacts', 'ContactController');
+//Route::controller('/locations', 'LocationController');
+//Route::controller('/employees', 'EmployeeController');
+//Route::controller('/users', 'UserController');
