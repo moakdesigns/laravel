@@ -13,10 +13,10 @@ class CustomerController extends BaseController {
 		return Customer::all();
 	} 	// end getAll()
 
-	// Add new customer
+	// Add customer
 	public function postIndex() {
 		if (Input::has('first_name', 'last_name', 'email')) { 	// check inputs
-			$input = Input::all(); // this avoids calling Input::get() over & over
+			$input = Input::all(); // assign to $input; this avoids calling Input::get() over & over
 			if ($input['first_name'] == '' || $input['last_name'] == '' || $input['email'] == '') { 	// checks for empty input fields
 				return Response::make('You need to fill all of the fields', 400);	// if found empty, return HTTP 400 Bad Request error
 			}
