@@ -11,7 +11,5 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::controller('/customers', 'CustomerController');
+Route::controller('/transactions', 'TransactionController');
