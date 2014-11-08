@@ -6,12 +6,12 @@ class CustomerController extends BaseController {
 	public function getIndex() {
 		$id = Input::get('id');
 		return Customer::find($id);
-	}
+	}	// end getIndex()
 
 	// Return all customers list
 	public function getAll() {
 		return Customer::all();
-	}
+	} 	// end getAll()
 
 	// Add new customer
 	public function postIndex() {
@@ -31,7 +31,7 @@ class CustomerController extends BaseController {
 		} else  {
 				return Response::make('You need to fill out all fields', 400);	// return 400 if not all inputs filled
 		}
-	}
+	} 	//end postIndex()
 
 	// Search for & delete customer
 	public function deleteIndex() {
@@ -39,5 +39,6 @@ class CustomerController extends BaseController {
 		$customer = Customer::find('id');	// search for customer
 		$customer->delete(); 	// delete customer
 		return $id;
-	}
-}
+	}	// end deleteIndex()
+
+}	// end CustomerController
