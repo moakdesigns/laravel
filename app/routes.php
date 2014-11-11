@@ -18,4 +18,4 @@ Route::controller('/transactions', 'TransactionController');
 //Route::controller('/locations', 'LocationController');
 //Route::controller('/employees', 'EmployeeController');
 //Route::controller('/users', 'UserController');
-Route::get('/', function () { return View::make('layout'); });
+Route::get('/', function () { return View::make('home'); });
