@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app"> <!-- tells Angular to use module named app -->
+<html data-ng-app="app"> <!-- tells Angular to use module named app -->
 
 <head>
 <title>Customer Management</title>
@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <div ng-view>
+
+  <div>
     <h1>Customer Management</h1>
   </div>
 
