@@ -11,7 +11,9 @@
 </head>
 
 <body>
-
+  <div ng-view>
+    <h1>Customer Management</h1>
+  </div>
 
 
 </body>
